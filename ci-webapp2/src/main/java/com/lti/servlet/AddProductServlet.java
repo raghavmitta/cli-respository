@@ -28,6 +28,7 @@ public class AddProductServlet extends HttpServlet {
     		p.setPrice(Double.parseDouble(request.getParameter("price")));
     		ProductDao dao=new ProductDao();
     		dao.insert(p);
+    		response.setContentType("text/html");
     		response.getWriter().write("Product added sucessfully.<a href='addProduct.jsp'>Click here to add more</a>");
     		
   
